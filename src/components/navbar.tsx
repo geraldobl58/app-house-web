@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Sparkles } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-// import { ModeToggle } from "@/components/mode-toggle";
+import { ModeToggle } from "@/components/mode-toggle";
 import { Navigation } from "@/components/navigation";
 import { MobileNavigation } from "@/components/mobile-navigation";
 
@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="flex items-center">
         <MobileNavigation />
         <Link href="/" passHref>
-          <Image alt="Logo" src="/logo.svg" width={50} height={50} />
+          <Image alt="Logo" src="/logo.svg" width={40} height={40} />
         </Link>
       </div>
       <div className="flex items-center gap-x-3">
@@ -44,7 +44,7 @@ const Navbar = () => {
           Anunciar <Sparkles className="h-4 w-4 fill-white text-white ml-2" />
         </Button>
         {/* <UserButton afterSignOutUrl="/" /> */}
-        {/* <ModeToggle /> */}
+        <ModeToggle />
       </div>
     </div>
   );
