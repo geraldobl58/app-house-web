@@ -26,12 +26,20 @@ export const Navigation = () => {
       label: "Vender",
     },
     {
-      href: "/help",
-      label: "Ajuda",
+      href: "/rent",
+      label: "Alugar",
     },
     {
-      href: "/about",
-      label: "Sobre",
+      href: "/help",
+      label: "Festival",
+    },
+    {
+      href: "/featured",
+      label: "Lançamentos",
+    },
+    {
+      href: "/explorer",
+      label: "Explorar",
     },
     {
       href: "/contact",
@@ -54,7 +62,7 @@ export const Navigation = () => {
                 group
                 flex
                 p-3
-                mr-2
+                mr-6
                 w-full
                 justify-start
                 font-medium
@@ -69,7 +77,7 @@ export const Navigation = () => {
               )}
             >
               <div className="flex gap-y-2 items-center flex-1">
-                <div className="text-sm">{route.label}</div>
+                <div className="text-base">{route.label}</div>
               </div>
             </div>
           ))}
