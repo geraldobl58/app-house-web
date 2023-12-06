@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import { Montserrat } from "next/font/google";
 
+import { ThemeProvider } from "@/providers/theme-provider";
+
 import "./globals.css";
 
 const font = Montserrat({ subsets: ["latin"] });
@@ -18,7 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
