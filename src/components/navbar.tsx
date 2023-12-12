@@ -40,8 +40,15 @@ const Navbar = () => {
         <div className="hidden lg:block mt-2">
           <Navigation />
         </div>
-        <Button size="default" variant="premiun">
-          Anunciar <Sparkles className="h-4 w-4 fill-white text-white ml-2" />
+        <Button size="default" variant="premiun" asChild>
+          <Link href="/sign-in" passHref className="flex">
+            Anunciar <Sparkles className="h-4 w-4 fill-white text-white ml-2" />
+          </Link>
+        </Button>
+        <Button size="default" variant="ghost" asChild>
+          <Link href="/sign-in" passHref>
+            Entrar
+          </Link>
         </Button>
         {/* <UserButton afterSignOutUrl="/" /> */}
         <ModeToggle />
