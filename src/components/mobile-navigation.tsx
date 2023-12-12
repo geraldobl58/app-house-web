@@ -1,8 +1,7 @@
 import { Menu } from "lucide-react";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-
-import { Navigation } from "@/components/navigation";
+import { Navigation } from "./navigation";
 
 export const MobileNavigation = () => {
   return (

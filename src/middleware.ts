@@ -7,25 +7,6 @@ import { NextResponse } from "next/server";
 // See https://clerk.com/docs/references/nextjs/auth-middleware for more information about configuring your Middleware
 export default authMiddleware({
   publicRoutes: ["/"],
-  afterAuth(auth, req) {
-    if (auth.userId && auth.isPublicRoute) {
-      let path = "/dashboard";
-
-      const dashboardSelection = new URL(path, req.url);
-
-      return NextResponse.redirect(dashboardSelection);
-    }
-
-    if (!auth.userId && !auth.isPublicRoute) {
-      return redirectToSignIn({ returnBackUrl: req.url });
-    }
-
-    if (auth.userId && req.nextUrl.pathname !== "/dashboard") {
-      const dashboardSelection = new URL("/dashboard", req.url);
-
-      return NextResponse.redirect(dashboardSelection);
-    }
-  },
 });
 
 export const config = {
