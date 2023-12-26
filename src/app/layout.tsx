@@ -12,8 +12,8 @@ const font = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Realty",
-  description: "Realty Application",
+  title: "House Web",
+  description: "House Web Application",
 };
 
 export default function RootLayout({
