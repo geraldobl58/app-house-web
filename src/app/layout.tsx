@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { Montserrat, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import { ThemeProvider } from "@/providers/theme-provider";
 
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
         </ThemeProvider>
       </body>
